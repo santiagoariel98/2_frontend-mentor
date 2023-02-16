@@ -1,33 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+    <title>Frontend Mentor | NFT preview card component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --primary-soft-blue: hsl(215, 51%, 70%);
+        --primary-cyan: hsl(178, 100%, 50%);
+        --secondary-body-blue: hsl(217, 54%, 11%); /* (main BG) */
+        --secondary-card-blue: hsl(216, 50%, 16%); /* (card BG) */
+        --secondary-line-blue: hsl(215, 32%, 27%); /* (line) */
+        font-family: "Outfit", sans-serif;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: var(--primary-soft-blue);
+      }
+      .icon {
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .icon-clock {
+        background-image: url("./images/icon-clock.svg");
+        background-size: cover;
+      }
+      .icon-ethereum {
+        background-size: contain;
+        background-image: url("./images/icon-ethereum.svg");
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--secondary-body-blue)] text-white tracking-wide">
+    <div>
+      <main class="w-screen h-screen flex items-center justify-center flex-col">
+        <section class="w-72 p-5 bg-[var(--secondary-card-blue)] rounded-2xl shadow-2xl">
+          <img class="rounded-lg" src="./images/image-equilibrium.jpg" alt="Equilibrium" width="270" height="270" />
+          <div>
+            <h4 class="text-lg font-[500] py-4">Equilibrium #3429</h4>
+            <p class="text-sm font-light text-[var(--primary-soft-blue)]">
+              Our Equilibrium collection promotes balance and calm.
+            </p>
+            <div class="text-[13px] flex justify-between py-4 text-[var(--primary-soft-blue)]">
+              <span class="flex items-center text-[var(--primary-cyan)]"
+                ><i class="mr-1 icon icon-ethereum inline-flex w-3 h-4"></i>0.041 ETH</span
+              >
+              <span class="flex font-light items-center"
+                ><i class="mr-1 icon icon-clock inline-flex w-4 h-4"></i>3 days left
+              </span>
+            </div>
+          </div>
+          <hr class="border-[var(--secondary-line-blue)]" />
+          <span class="flex pt-4 items-center text-[var(--primary-soft-blue)]">
+            <img
+              class="border-[1px] rounded-full mr-3"
+              src="./images/image-avatar.png"
+              alt="avatar user"
+              width="28"
+              height="28"
+            />
+            <p class="text-xs">Creation of <b class="text-white font-light">Jules Wyvern</b></p>
+          </span>
+        </section>
+        <div class="attribution pt-2">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
+          by <a href="#">Santiago Ariel Villanueva</a>.
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
