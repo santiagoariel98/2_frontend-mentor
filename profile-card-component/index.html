@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
-
+    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
     <title>Frontend Mentor | Profile card component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      :root {
+        --dark-cyan: hsl(185, 75%, 39%);
+        --dark-desaturated-blue: hsl(229, 23%, 23%);
+        --dark-grayish-blue: hsl(227, 10%, 46%);
+        --dark-gray: hsl(0, 0%, 59%);
+        font-family: "Kumbh Sans", sans-serif;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -22,11 +30,44 @@
       }
     </style>
   </head>
-  <body>
-    Victor Crest 26 London 80K Followers 803K Likes 1.4K Photos
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-      <a href="#">Your Name Here</a>.
-    </div>
+  <body
+    class="w-screen h-screen text-[var(--dark-desaturated-blue)] bg-[url('./images/bg-pattern-top.svg')] bg-no-repeat bg-[-15rem_-31rem] bg-[var(--dark-cyan)]"
+  >
+    <main
+      class="w-full h-full flex items-center justify-center bg-[url('./images/bg-pattern-bottom.svg')] bg-no-repeat bg-[46rem_24rem]"
+    >
+      <section class="bg-white w-[22rem] h-[23.5rem] rounded-2xl overflow-hidden shadow-xl">
+        <div class="bg-[url('./images/bg-pattern-card.svg')] h-[8.75rem] flex items-center justify-center">
+          <span class="rounded-2xl -mb-[8.75rem] rounded-full overflow-hidden border-4 border-white">
+            <img src="images/image-victor.jpg" width="100" height="100" />
+          </span>
+        </div>
+        <div class="flex flex-col items-center justify-center h-36 pt-12 tracking-wide">
+          <h4 class="text-lg font-bold">
+            Victor Crest <span class="font-light text-[var(--dark-grayish-blue)]"> 26 </span>
+          </h4>
+          <p class="text-sm text-[var(--dark-gray)]">London</p>
+        </div>
+        <hr />
+        <div class="flex justify-center items-center h-[5.5rem] gap-9">
+          <span class="w-16 flex flex-col items-center">
+            <p class="text-lg font-bold">80K</p>
+            <span class="text-xs font-light text-[var(--dark-gray)]">Followers</span>
+          </span>
+          <span class="w-16 flex flex-col items-center">
+            <p class="text-lg font-bold">803K</p>
+            <span class="text-xs font-light text-[var(--dark-gray)]">Likes</span>
+          </span>
+          <span class="w-16 flex flex-col items-center">
+            <p class="text-lg font-bold">1.4K</p>
+            <span class="text-xs font-light text-[var(--dark-gray)]">Photos</span>
+          </span>
+        </div>
+      </section>
+      <!-- <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
+          by <a href="#">Your Name Here</a>.
+        </div> -->
+    </main>
   </body>
 </html>
