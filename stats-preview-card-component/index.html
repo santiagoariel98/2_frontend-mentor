@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Stats preview card component</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --very-dark-blue: hsl(233, 47%, 7%); /* (main background) */
+        --dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background) */
+        --soft-violet: hsl(277, 64%, 61%); /* (accent) */
+        --white: hsl(0, 0%, 100%); /* (main heading, stats) */
+        --slightly-transparent-white-1: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+        --slightly-transparent-white-2: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+        color: var(--slightly-transparent-white-1);
+        font-family: "Lexend Deca", sans-serif;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen bg-[var(--very-dark-blue)] text-[15px]">
+    <main class="w-full h-full flex flex-col items-center justify-center">
+      <section class="flex bg-[var(--dark-desaturated-blue)] overflow-hidden rounded-md mt-5">
+        <div class="max-w-lg w-full p-16 flex flex-col justify-between">
+          <div class="flex flex-col gap-6 font-['Inter']">
+            <h2 class="text-[33.3px] font-bold leading-tight mt-1">
+              Get <span class="text-[var(--soft-violet)]">insights</span> that help your business grow.
+            </h2>
+            <p class="font-light">
+              Discover the benefits of data analytics and make better decisions regarding revenue, customer experience,
+              and overall efficiency.
+            </p>
+          </div>
+          <div class="flex gap-[3.75rem]">
+            <span>
+              <p class="text-2xl font-bold">10k+</p>
+              <p class="uppercase text-xs">companies</p>
+            </span>
+            <span>
+              <p class="text-2xl font-bold">314</p>
+              <p class="uppercase text-xs">templates</p>
+            </span>
+            <span>
+              <p class="text-2xl font-bold uppercase">12m+</p>
+              <p class="uppercase text-xs">queries</p>
+            </span>
+          </div>
+        </div>
+        <div class="max-w-lg w-full">
+          <img src="./images/image-header-desktop.jpg" alt="happy women" />
+        </div>
+      </section>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="#">Santiago Ariel Villanueva</a>.
+      </div>
+    </main>
+    <!-- <div class="w-screen h-screen absolute top-0 left-0 grayscale opacity-30">
+      <img class="w-screen h-screen object-contain" src="./design/desktop-design.jpg" alt="preview" />
+    </div> -->
+  </body>
 </html>
