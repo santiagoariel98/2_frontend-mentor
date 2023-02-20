@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/tailwind.css -o ./src/style.css --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/santiagoariel98/2_frontend-mentor/issues"
   },
-  "homepage": "https://github.com/santiagoariel98/2_frontend-mentor#readme"
+  "homepage": "https://github.com/santiagoariel98/2_frontend-mentor#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  }
 }
