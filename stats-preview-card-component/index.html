@@ -35,11 +35,13 @@
     </style>
   </head>
   <body class="w-screen h-screen bg-[var(--very-dark-blue)] text-[15px]">
-    <main class="w-full h-full flex flex-col items-center justify-center">
-      <section class="flex bg-[var(--dark-desaturated-blue)] overflow-hidden rounded-md mt-5">
-        <div class="max-w-lg w-full p-16 flex flex-col justify-between">
+    <main class="w-full h-max flex flex-col items-center justify-center px-6">
+      <section
+        class="flex bg-[var(--dark-desaturated-blue)] overflow-hidden rounded-md mt-5 max-sm:flex-col-reverse max-sm:w-full max-md:text-center max-md:mt-20"
+      >
+        <div class="max-w-lg w-full p-16 flex flex-col justify-between max-md:max-w-max max-md:p-6 max-md:text-center">
           <div class="flex flex-col gap-6 font-['Inter']">
-            <h2 class="text-[33.3px] font-bold leading-tight mt-1">
+            <h2 class="text-[33.3px] font-bold leading-tight mt-1 max-sm:text-2xl">
               Get <span class="text-[var(--soft-violet)]">insights</span> that help your business grow.
             </h2>
             <p class="font-light">
@@ -47,7 +49,7 @@
               and overall efficiency.
             </p>
           </div>
-          <div class="flex gap-[3.75rem]">
+          <div class="flex gap-[3.75rem] max-sm:flex-col max-sm:gap-5 max-sm:mt-6">
             <span>
               <p class="text-2xl font-bold">10k+</p>
               <p class="uppercase text-xs">companies</p>
@@ -62,17 +64,14 @@
             </span>
           </div>
         </div>
-        <div class="max-w-lg w-full">
+        <div class="max-w-lg w-full max-md:max-w-max w-full">
           <img src="./images/image-header-desktop.jpg" alt="happy women" />
         </div>
       </section>
-      <div class="attribution">
+      <div class="attribution text-[9px]">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
         <a href="#">Santiago Ariel Villanueva</a>.
       </div>
     </main>
-    <!-- <div class="w-screen h-screen absolute top-0 left-0 grayscale opacity-30">
-      <img class="w-screen h-screen object-contain" src="./design/desktop-design.jpg" alt="preview" />
-    </div> -->
   </body>
 </html>
