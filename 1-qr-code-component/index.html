@@ -16,8 +16,6 @@
         --grayish-blue: hsl(220, 15%, 55%);
         --dark-blue: hsl(218, 44%, 22%);
         font-family: "Outfit";
-        font-size: 15px;
-        letter-spacing: 0.07rem;
       }
       .attribution {
         font-size: 11px;
@@ -30,19 +28,24 @@
   </head>
   <body class="w-screen h-screen bg-[var(--light-gray)]">
     <main class="w-full h-full flex flex-col items-center justify-center">
-      <section class="bg-white w-80 h-[30.5rem] p-4 rounded-2xl opacity-70 mt-2 shadow-xl">
+      <section class="bg-white w-80 p-4 rounded-2xl shadow-xl h-[31rem]">
         <img class="rounded-xl" src="./images/image-qr-code.png" alt="qr code" width="100%" />
-        <div class="p-5 flex flex-col gap-3 text-center">
-          <h3 class="text-[18px] font-bold">Improve your front-end skills by building projects</h3>
-          <p class="tracking-normal text-[14px] leading-5">
+        <div class="p-5 pt-6 flex flex-col gap-4 text-center">
+          <h3 class="font-bold text-[22px] tracking-[-0.002em] leading-[29px]">
+            Improve your front-end skills by building projects
+          </h3>
+          <p class="text-[15px] tracking-[0.01em] leading-[19px]">
             Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
           </p>
         </div>
       </section>
-      <div class="attribution">
+      <div class="attribution fixed bottom-0 right-0">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
         <a href="#">Santiago Ariel Villanueva</a>.
       </div>
     </main>
   </body>
+  <!-- <div
+    class="bg-[url('./design/desktop-design.jpg')] absolute top-0 left-0 bg-no-repeat bg-center w-screen h-screen grayscale opacity-50"
+  ></div> -->
 </html>
