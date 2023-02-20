@@ -16,4 +16,5 @@
 .prettierignore
 
 
-data.html
+template.html
+node_modules
