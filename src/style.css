@@ -1158,6 +1158,10 @@ video {
   letter-spacing: 0.025em;
 }
 
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
 .text-\[var\(--dark-desaturated-blue\)\] {
   color: var(--dark-desaturated-blue);
 }
