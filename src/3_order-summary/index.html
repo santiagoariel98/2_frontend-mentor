@@ -31,25 +31,12 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-      .icon {
-        background-repeat: no-repeat;
-        background-position: center;
-        display: inline-flex;
-      }
-      .bg-image {
-        background-image: url(./images/pattern-background-desktop.svg);
-        background-size: contain;
-        background-position: top;
-        background-repeat: no-repeat;
-      }
-      .icon-music {
-        background: url(images/icon-music.svg);
-        background-size: cover;
-      }
     </style>
   </head>
   <body class="bg-[var(--pale-blue)]">
-    <div class="w-screen h-screen flex items-center justify-center bg-image">
+    <div
+      class="w-screen h-screen flex items-center justify-center bg-[url('./images/pattern-background-desktop.svg')] bg-no-repeat bg-top bg-contain"
+    >
       <main class="p-8">
         <section
           class="max-w-[23rem] max-h-[36rem] w-full h-full rounded-2xl overflow-hidden bg-[var(--very-pale-blue)] shadow-xl max-sm:h-min"
@@ -61,7 +48,11 @@
               You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
             </p>
             <div class="flex justify-between items-center w-full p-5 my-2 max-sm:my-4 max-sm:px-3">
-              <span class="flex-none"><i class="icon icon-music w-9 h-9 mr-5"></i></span>
+              <span class="flex-none"
+                ><i
+                  class="icon bg-center bg-no-repeat inline-flex bg-[url(images/icon-music.svg)] bg-cover w-9 h-9 mr-5"
+                ></i
+              ></span>
               <div class="flex flex-col items-start flex-1 justify-between">
                 <p class="font-black text-sm">Annual Plan</p>
                 <span class="text-[var(--desaturated-blue)] text-xs">$59.99/year</span>
@@ -78,11 +69,14 @@
             </div>
           </form>
         </section>
-        <!-- <div class="attribution">
+        <div class="attribution fixed bottom-0 right-0">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
-          by <a href="#">Your Name Here</a>.
-        </div> -->
+          by <a href="#">Santiago Ariel Villanueva</a>.
+        </div>
       </main>
+      <div
+        class="bg-[url('./design/desktop-design.jpg')] absolute top-0 left-0 w-screen h-screen bg-center opacity-50 bg-no-repeat bg-contain"
+      ></div>
     </div>
   </body>
 </html>
