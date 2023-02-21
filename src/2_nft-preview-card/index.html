@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | NFT preview card component</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css" />
     <style>
       :root {
         --primary-soft-blue: hsl(215, 51%, 70%);
@@ -26,36 +26,30 @@
       .attribution a {
         color: var(--primary-soft-blue);
       }
-      .icon {
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      .icon-clock {
-        background-image: url("./images/icon-clock.svg");
-        background-size: cover;
-      }
-      .icon-ethereum {
-        background-size: contain;
-        background-image: url("./images/icon-ethereum.svg");
-      }
     </style>
   </head>
   <body class="bg-[var(--secondary-body-blue)] text-white tracking-wide">
     <div>
       <main class="w-screen h-screen flex items-center justify-center flex-col">
         <section class="w-72 p-5 bg-[var(--secondary-card-blue)] rounded-2xl shadow-2xl">
-          <img class="rounded-lg" src="./images/image-equilibrium.jpg" alt="Equilibrium" width="270" height="270" />
-          <div>
-            <h4 class="text-lg font-[500] py-4">Equilibrium #3429</h4>
+          <img class="rounded-lg" src="./images/image-equilibrium.jpg" alt="Equilibrium" width="100%" height="100%" />
+          <div class="flex flex-col gap-[1rem] py-4">
+            <h4 class="text-lg font-[500]">Equilibrium #3429</h4>
             <p class="text-sm font-light text-[var(--primary-soft-blue)]">
               Our Equilibrium collection promotes balance and calm.
             </p>
-            <div class="text-[13px] flex justify-between py-4 text-[var(--primary-soft-blue)]">
+            <div class="text-[13px] flex justify-between text-[var(--primary-soft-blue)]">
               <span class="flex items-center text-[var(--primary-cyan)]"
-                ><i class="mr-1 icon icon-ethereum inline-flex w-3 h-4"></i>0.041 ETH</span
+                ><i
+                  class="mr-1 bg-no-repeat bg-center bg-[url('2_nft-preview-card/images/icon-ethereum.svg')] bg-contain inline-flex w-3 h-4"
+                ></i
+                >0.041 ETH</span
               >
               <span class="flex font-light items-center"
-                ><i class="mr-1 icon icon-clock inline-flex w-4 h-4"></i>3 days left
+                ><i
+                  class="mr-1 bg-no-repeat bg-center bg-[url('2_nft-preview-card/images/icon-clock.svg')] bg-cover inline-flex w-4 h-4"
+                ></i
+                >3 days left
               </span>
             </div>
           </div>
@@ -71,7 +65,7 @@
             <p class="text-xs">Creation of <b class="text-white font-light">Jules Wyvern</b></p>
           </span>
         </section>
-        <div class="attribution pt-2">
+        <div class="attribution fixed bottom-0 right-0">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
           by <a href="#">Santiago Ariel Villanueva</a>.
         </div>
