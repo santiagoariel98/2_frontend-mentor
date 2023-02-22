@@ -525,160 +525,40 @@ video {
   position: relative;
 }
 
-.-bottom-\[44rem\] {
-  bottom: -44rem;
-}
-
-.-left-\[51rem\] {
-  left: -51rem;
-}
-
-.-right-\[51rem\] {
-  right: -51rem;
-}
-
-.-top-\[44rem\] {
-  top: -44rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.-bottom-\[45rem\] {
-  bottom: -45rem;
-}
-
-.-bottom-\[46rem\] {
-  bottom: -46rem;
-}
-
-.-bottom-\[48rem\] {
-  bottom: -48rem;
-}
-
-.-right-\[54rem\] {
-  right: -54rem;
-}
-
-.-right-\[50rem\] {
-  right: -50rem;
-}
-
 .-bottom-\[50rem\] {
   bottom: -50rem;
-}
-
-.-bottom-\[49rem\] {
-  bottom: -49rem;
-}
-
-.-right-\[40rem\] {
-  right: -40rem;
-}
-
-.-right-\[49rem\] {
-  right: -49rem;
-}
-
-.-right-\[48rem\] {
-  right: -48rem;
-}
-
-.-right-\[489rem\] {
-  right: -489rem;
-}
-
-.-bottom-\[38\.5rem\] {
-  bottom: -38.5rem;
-}
-
-.-left-\[15rem\] {
-  left: -15rem;
-}
-
-.-right-\[12rem\] {
-  right: -12rem;
-}
-
-.-top-\[31rem\] {
-  top: -31rem;
-}
-
-.-top-\[20rem\] {
-  top: -20rem;
-}
-
-.-left-\[30rem\] {
-  left: -30rem;
-}
-
-.-left-\[20rem\] {
-  left: -20rem;
-}
-
-.-left-\[25rem\] {
-  left: -25rem;
-}
-
-.-left-\[10rem\] {
-  left: -10rem;
-}
-
-.-top-\[15rem\] {
-  top: -15rem;
-}
-
-.-top-\[33rem\] {
-  top: -33rem;
-}
-
-.-left-\[33rem\] {
-  left: -33rem;
-}
-
-.-left-\[55rem\] {
-  left: -55rem;
-}
-
-.-top-\[40rem\] {
-  top: -40rem;
-}
-
-.-top-\[42rem\] {
-  top: -42rem;
 }
 
 .-left-\[52rem\] {
   left: -52rem;
 }
 
-.-bottom-\[55rem\] {
-  bottom: -55rem;
+.-right-\[48rem\] {
+  right: -48rem;
 }
 
-.-right-\[42rem\] {
-  right: -42rem;
+.-top-\[42rem\] {
+  top: -42rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-\[-1\] {
   z-index: -1;
-}
-
-.z-10 {
-  z-index: 10;
 }
 
 .my-2 {
@@ -783,18 +663,6 @@ video {
   height: 100vh;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-\[24rem\] {
-  height: 24rem;
-}
-
-.h-\[25rem\] {
-  height: 25rem;
-}
-
 .max-h-\[36rem\] {
   max-height: 36rem;
 }
@@ -846,10 +714,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .min-w-fit {
@@ -953,14 +817,14 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
 .rounded-t-2xl {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .border {
@@ -1055,10 +919,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\.\/6_profile-card\/design\/desktop-design\.jpg\'\)\] {
-  background-image: url('./6_profile-card/design/desktop-design.jpg');
-}
-
 .bg-\[url\(\'\.\/6_profile-card\/images\/bg-pattern-card\.svg\'\)\] {
   background-image: url('./6_profile-card/images/bg-pattern-card.svg');
 }
@@ -1075,16 +935,24 @@ video {
   background-image: url('2_nft-preview-card/images/icon-ethereum.svg');
 }
 
-.bg-\[url\(images\/icon-music\.svg\)\] {
-  background-image: url(images/icon-music.svg);
+.bg-\[url\(\'3_order-summary\/images\/icon-music\.svg\'\)\] {
+  background-image: url('3_order-summary/images/icon-music.svg');
 }
 
-.bg-\[url\(\'\.\/6_profile-card\/design\/mobile-design\.jpg\'\)\] {
-  background-image: url('./6_profile-card/design/mobile-design.jpg');
+.bg-\[url\(\'\.\/3_order-summary\/images\/pattern-background-desktop\.svg\'\)\] {
+  background-image: url('./3_order-summary/images/pattern-background-desktop.svg');
 }
 
-.bg-\[url\(\'\.\/6_profile-card\/design\/mobile-desktop\.jpg\'\)\] {
-  background-image: url('./6_profile-card/design/mobile-desktop.jpg');
+.bg-\[url\(\'3_order-summary\/images\/pattern-background-desktop\.svg\'\)\] {
+  background-image: url('3_order-summary/images/pattern-background-desktop.svg');
+}
+
+.bg-\[url\(3_order-summary\/design\/desktop-design\.jpg\)\] {
+  background-image: url(3_order-summary/design/desktop-design.jpg);
+}
+
+.bg-\[url\(\'\.\/3_order-summary\/design\/desktop-design\.jpg\'\)\] {
+  background-image: url('./3_order-summary/design/desktop-design.jpg');
 }
 
 .bg-contain {
@@ -1101,6 +969,50 @@ video {
 
 .bg-top {
   background-position: top;
+}
+
+.bg-bottom {
+  background-position: bottom;
+}
+
+.bg-\[1rem\] {
+  background-position: 1rem;
+}
+
+.bg-\[top_10rem\] {
+  background-position: top 10rem;
+}
+
+.bg-\[top_-10rem\] {
+  background-position: top -10rem;
+}
+
+.bg-\[top_20rem\] {
+  background-position: top 20rem;
+}
+
+.bg-\[20rem\] {
+  background-position: 20rem;
+}
+
+.bg-\[0_20rem\] {
+  background-position: 0 20rem;
+}
+
+.bg-\[0_-20rem\] {
+  background-position: 0 -20rem;
+}
+
+.bg-\[0_10rem\] {
+  background-position: 0 10rem;
+}
+
+.bg-\[0_-10rem\] {
+  background-position: 0 -10rem;
+}
+
+.bg-\[0_-5rem\] {
+  background-position: 0 -5rem;
 }
 
 .bg-no-repeat {
@@ -1403,16 +1315,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.grayscale {
-  --tw-grayscale: grayscale(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.invert {
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .hover\:bg-\[var\(--dark-blue\)\]:hover {
   background-color: var(--dark-blue);
 }
@@ -1516,6 +1418,10 @@ video {
     gap: 1.75rem;
   }
 
+  .max-md\:bg-cover {
+    background-size: cover;
+  }
+
   .max-md\:p-6 {
     padding: 1.5rem;
   }
@@ -1547,18 +1453,6 @@ video {
 }
 
 @media not all and (min-width: 640px) {
-  .max-sm\:-bottom-\[40rem\] {
-    bottom: -40rem;
-  }
-
-  .max-sm\:-bottom-\[45rem\] {
-    bottom: -45rem;
-  }
-
-  .max-sm\:-bottom-\[50rem\] {
-    bottom: -50rem;
-  }
-
   .max-sm\:my-4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -1595,6 +1489,10 @@ video {
 
   .max-sm\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .max-sm\:bg-top {
+    background-position: top;
   }
 
   .max-sm\:p-7 {
