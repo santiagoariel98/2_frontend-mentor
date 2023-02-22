@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
+
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,17 +14,16 @@
     />
     <title>Frontend Mentor | Stats preview card component</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       :root {
         --very-dark-blue: hsl(233, 47%, 7%); /* (main background) */
         --dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background) */
         --soft-violet: hsl(277, 64%, 61%); /* (accent) */
-        --white: hsl(0, 0%, 100%); /* (main heading, stats) */
-        --slightly-transparent-white-1: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
-        --slightly-transparent-white-2: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
-        color: var(--slightly-transparent-white-1);
-        font-family: "Lexend Deca", sans-serif;
+        --slightly-white-p: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+        --slightly-white-stat: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+        /* font-family: "Lexend Deca", sans-serif; */
       }
       .attribution {
         font-size: 11px;
@@ -34,41 +34,58 @@
       }
     </style>
   </head>
-  <body class="w-screen h-screen bg-[var(--very-dark-blue)] text-[15px]">
-    <main class="w-full h-max flex flex-col items-center justify-center px-6">
+  <body class="w-screen h-screen bg-[var(--very-dark-blue)] text-white overflow-auto">
+    <main class="w-full h-full flex items-center justify-center p-6 max-md:h-max">
       <section
-        class="flex bg-[var(--dark-desaturated-blue)] overflow-hidden rounded-md mt-5 max-sm:flex-col-reverse max-sm:w-full max-md:text-center max-md:mt-20"
+        class="bg-[var(--dark-desaturated-blue)] w-[65rem] flex h-[26rem] rounded-xl overflow-hidden max-md:flex-col max-md:h-fit max-md:w-full"
       >
-        <div class="max-w-lg w-full p-16 flex flex-col justify-between max-md:max-w-max max-md:p-6 max-md:text-center">
-          <div class="flex flex-col gap-6 font-['Inter']">
-            <h2 class="text-[33.3px] font-bold leading-tight mt-1 max-sm:text-2xl">
-              Get <span class="text-[var(--soft-violet)]">insights</span> that help your business grow.
-            </h2>
-            <p class="font-light">
-              Discover the benefits of data analytics and make better decisions regarding revenue, customer experience,
-              and overall efficiency.
-            </p>
-          </div>
-          <div class="flex gap-[3.75rem] max-sm:flex-col max-sm:gap-5 max-sm:mt-6">
-            <span>
-              <p class="text-2xl font-bold">10k+</p>
-              <p class="uppercase text-xs">companies</p>
-            </span>
-            <span>
-              <p class="text-2xl font-bold">314</p>
-              <p class="uppercase text-xs">templates</p>
-            </span>
-            <span>
-              <p class="text-2xl font-bold uppercase">12m+</p>
-              <p class="uppercase text-xs">queries</p>
-            </span>
+        <div class="flex-1 min-w-fit hidden max-md:block">
+          <img
+            class="w-full h-full"
+            src="./images/image-header-mobile.jpg"
+            alt="working women"
+            height="100%"
+            width="100%"
+          />
+        </div>
+        <div class="flex-1 w-full">
+          <div class="p-[4.25rem] h-full flex flex-col justify-between max-md:p-6 max-md:py-12 max-md:text-center">
+            <div>
+              <h3 class="text-[34px] font-bold leading-[1.2] max-md:text-[26px]">
+                Get <span class="text-[var(--soft-violet)]">insights</span> that help your business grow.
+              </h3>
+              <p class="text-[15px] pt-6 font-['Lexend Deca'] max-md:pt-4 text-[var(--slightly-white-p)]">
+                Discover the benefits of data analytics and make better decisions regarding revenue, customer
+                experience, and overall efficiency.
+              </p>
+            </div>
+            <div class="flex gap-16 -mb-2 max-md:flex-col max-md:pt-8 max-md:gap-6">
+              <span>
+                <h4 class="text-[22px] font-bold">10k+</h4>
+                <p class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca']">companies</p>
+              </span>
+              <span>
+                <h4 class="text-[22px] font-bold">314</h4>
+                <p class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca']">templates</p>
+              </span>
+              <span>
+                <h4 class="text-[22px] font-bold uppercase">12m+</h4>
+                <p class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca']">queries</p>
+              </span>
+            </div>
           </div>
         </div>
-        <div class="max-w-lg w-full max-md:max-w-max w-full">
-          <img src="./images/image-header-desktop.jpg" alt="happy women" />
+        <div class="flex-1 min-w-fit block max-md:hidden">
+          <img
+            class="w-full h-full"
+            src="./images/image-header-desktop.jpg"
+            alt="working women"
+            height="100%"
+            width="100%"
+          />
         </div>
       </section>
-      <div class="attribution text-[9px]">
+      <div class="attribution fixed bottom-0 right-0">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
         <a href="#">Santiago Ariel Villanueva</a>.
       </div>
