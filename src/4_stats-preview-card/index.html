@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +13,6 @@
       rel="stylesheet"
     />
     <title>Frontend Mentor | Stats preview card component</title>
-
     <style>
       :root {
         --very-dark-blue: hsl(233, 47%, 7%); /* (main background) */
@@ -30,7 +29,7 @@
         text-align: center;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(228, 45%, 64%);
       }
     </style>
   </head>
@@ -40,13 +39,7 @@
         class="bg-[var(--dark-desaturated-blue)] w-[65rem] flex h-[26rem] rounded-xl overflow-hidden max-md:flex-col max-md:h-fit max-md:w-full"
       >
         <div class="flex-1 min-w-fit hidden max-md:block">
-          <img
-            class="w-full h-full"
-            src="./images/image-header-mobile.jpg"
-            alt="working women"
-            height="100%"
-            width="100%"
-          />
+          <img class="w-full h-full object-contain" src="./images/image-header-mobile.jpg" alt="working women" />
         </div>
         <div class="flex-1 w-full">
           <div class="p-[4.25rem] h-full flex flex-col justify-between max-md:p-6 max-md:py-12 max-md:text-center">
