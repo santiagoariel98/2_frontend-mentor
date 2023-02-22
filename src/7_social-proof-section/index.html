@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap"
+      rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
     <title>Frontend Mentor | Social proof section</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      :root {
+        --very-dark-magenta: hsl(300, 43%, 22%);
+        --soft-pink: hsl(333, 80%, 67%);
+        --dark-grayish-magenta: hsl(303, 10%, 53%);
+        --light-grayish-magenta: hsl(300, 24%, 96%);
+        font-family: "League Spartan", sans-serif;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -23,39 +28,117 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      .icon-star {
+        background-image: url("./images/icon-star.svg");
+        width: 17px;
+        height: 16px;
+        display: block;
+      }
     </style>
   </head>
-  <body>
-    10,000+ of our users love our products.
-
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+  <body class="w-screen h-screen text-[15px] text-[var(--very-dark-magenta)] max-md:w-full">
+    <main class="w-full h-full flex flex-col items-center justify-center max-md:h-max px-4 max-md:pt-16">
+      <div class="max-w-5xl w-full flex flex-col gap-12">
+        <div class="flex justify-between mt-5 max-md:flex-col">
+          <section class="font-bold w-[24rem] max-sm:w-full max-md:text-center">
+            <h2 class="text-5xl leading-[0.95] font-black max-md:text-[2.35rem] max-md:px-4 max-md:leading-[0.85]">
+              10,000+ of our users love our products.
+            </h2>
+            <p
+              class="mt-6 tracking-[0.020em] leading-6 font-normal text-[var(--dark-grayish-magenta)] max-md:text-base"
+            >
+              We only provide great products combined with excellent customer service. See what our satisfied customers
+              are saying about our services.
+            </p>
+          </section>
+          <section class="flex flex-col justify-center gap-3 max-w-[31rem] w-full max-md:max-w-none max-md:mt-9">
+            <span
+              class="flex bg-[var(--light-grayish-magenta)] items-center px-8 py-4 rounded-lg w-[26rem] self-start max-md:w-full max-md:flex-col max-md:gap-[0.5rem]"
+            >
+              <span class="flex gap-[0.4rem] mr-7 max-md:mr-0"
+                ><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i
+                ><i class="icon-star"></i
+              ></span>
+              <p class="font-bold tracking-wide">Rated 5 Stars in Reviews</p>
+            </span>
+            <span
+              class="flex bg-[var(--light-grayish-magenta)] items-center px-8 py-4 rounded-lg w-[26rem] self-center max-md:w-full max-md:flex-col max-md:gap-[0.5rem]"
+            >
+              <span class="flex gap-[0.4rem] mr-7 max-md:mr-0"
+                ><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i
+                ><i class="icon-star"></i
+              ></span>
+              <p class="font-bold tracking-wide">Rated 5 Stars in Report Guru</p>
+            </span>
+            <span
+              class="flex bg-[var(--light-grayish-magenta)] items-center px-8 py-4 rounded-lg w-[26rem] self-end max-md:w-full max-md:flex-col max-md:gap-[0.5rem]"
+            >
+              <span class="flex gap-[0.4rem] mr-7 max-md:mr-0"
+                ><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i
+                ><i class="icon-star"></i
+              ></span>
+              <p class="font-bold tracking-wide">Rated 5 Stars in BestTech</p>
+            </span>
+          </section>
+        </div>
+        <div class="flex justify-between min-h-[15.5rem] h-min mt-5 text-white gap-5 max-md:flex-col">
+          <section
+            class="bg-[var(--very-dark-magenta)] max-w-80 w-full h-max rounded-lg self-start px-6 py-8 flex flex-col gap-5"
+          >
+            <div class="flex mt-2 items-center">
+              <span class="mr-5 rounded-full overflow-hidden w-max h-max">
+                <img src="./images/image-colton.jpg" alt="avatar" width="38" height="38" />
+              </span>
+              <span>
+                <p>Colton Smith</p>
+                <p class="text-[var(--soft-pink)] leading-normal">Verified Buyer</p>
+              </span>
+            </div>
+            <q class="leading-5 tracking-wide">
+              We needed the same printed design as the one we had ordered a week prior. Not only did they find the
+              original order, but we also received it in time. Excellent!
+            </q>
+          </section>
+          <section
+            class="bg-[var(--very-dark-magenta)] max-w-80 w-full h-max rounded-lg self-center px-6 py-8 flex flex-col gap-5"
+          >
+            <div class="flex mt-2 items-center">
+              <span class="mr-5 rounded-full overflow-hidden w-max h-max">
+                <img src="./images/image-irene.jpg" alt="avatar" width="38" height="38" />
+              </span>
+              <span>
+                <p>Irene Roberts</p>
+                <p class="text-[var(--soft-pink)] leading-normal">Verified Buyer</p>
+              </span>
+            </div>
+            <q class="leading-5 tracking-wide">
+              Customer service is always excellent and very quick turn around. Completely delighted with the simplicity
+              of the purchase and the speed of delivery.
+            </q>
+          </section>
+          <section
+            class="bg-[var(--very-dark-magenta)] max-w-80 w-full h-max rounded-lg self-end px-6 py-8 flex flex-col gap-5"
+          >
+            <div class="flex mt-2 items-center">
+              <span class="mr-5 rounded-full overflow-hidden w-max h-max">
+                <img src="./images/image-anne.jpg" alt="avatar" width="38" height="38" />
+              </span>
+              <span>
+                <p>Anne Wallace</p>
+                <p class="text-[var(--soft-pink)] leading-normal">Verified Buyer</p>
+              </span>
+            </div>
+            <q class="leading-5 tracking-wide">
+              Put an order with this company and can only praise them for the very high standard. Will definitely use
+              them again and recommend them to everyone!
+            </q>
+          </section>
+        </div>
+      </div>
+      <div class="attribution fixed bottom-0 right-0 text-black">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="#">Santiago Ariel Villanueva</a>.
+      </div>
+    </main>
   </body>
 </html>
