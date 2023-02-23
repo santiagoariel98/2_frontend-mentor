@@ -1,40 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | FAQ Accordion Card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
-
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
-
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        /* Background gradient: */
+        --soft-violet: hsl(273, 75%, 66%);
+        --soft-blue: hsl(240, 73%, 65%);
+        /* Background gradient: */
+        /* text */
+        --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+        --soft-red: hsl(14, 88%, 65%);
+        --very-dark-grayish-blue: hsl(237, 12%, 33%);
+        --dark-grayish-blue: hsl(240, 6%, 50%);
+        /* text */
+        /* divider */
+        --light-grayish-blue: hsl(240, 5%, 91%);
+        font-family: "Kumbh Sans", sans-serif;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 100%);
+      }
+      .icon-arrow-down {
+        width: 10px;
+        height: 7px;
+        background-image: url(./images/icon-arrow-down.svg);
+        display: block;
+      }
+      hr {
+        border-color: var(--light-grayish-blue);
+      }
+      details[open] summary span {
+        font-weight: bold;
+      }
+      details[open] summary span i {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body class="h-screen bg-gradient-to-b from-[var(--soft-violet)] to-[var(--soft-blue)]">
+    <main
+      class="h-full w-full flex items-center justify-center px-16 max-md:px-6 max-md:items-start max-md:mt-[6.75rem]"
+    >
+      <section
+        class="flex bg-white max-w-[57.5rem] w-full max-h-[32rem] h-full rounded-3xl max-md:flex-col relative max-md:h-max max-md:min-h-[33.5rem] shadow-xl"
+      >
+        <div class="flex-1 relative max-md:hidden">
+          <img src="images/illustration-box-desktop.svg" alt="box" class="absolute top-[206px] -left-[91px] z-10" />
+          <div class="w-full h-full flex items-center overflow-hidden">
+            <div class="w-max h-max -ml-[5.1rem] -mt-[6px]">
+              <img src="images/illustration-woman-online-desktop.svg" alt="woman online" />
+            </div>
+          </div>
+        </div>
+        <img
+          class="hidden max-md:block absolute top-0 left-0 right-0 w-60 mx-auto -mt-28"
+          src="images/illustration-woman-online-mobile.svg"
+          alt="woman online"
+        />
+        <div class="flex-1 pt-16 pl-9 flex flex-col gap-6 text-sm max-md:px-0 max-md:mt-[4.25rem] max-md:gap-4">
+          <h2 class="text-3xl text-[2rem] font-bold max-md:text-center">FAQ</h2>
+          <div class="max-w-[21.75rem] w-full max-md:max-w-none">
+            <details class="max-md:pl-6 pr-2">
+              <summary class="flex w-full h-[49px] items-center active:text-[var(--soft-red)] cursor-pointer">
+                <span class="grow text-start">How many team members can I invite?</span>
+                <span class="h-full w-10 flex items-center justify-center">
+                  <i class="icon-arrow-down"></i>
+                </span>
+              </summary>
+              <div class="text-xs mb-5">
+                You can invite up to 2 additional users on the Free plan. There is no limit on team members for the
+                Premium plan.
+              </div>
+            </details>
+            <hr />
+            <details class="max-md:pl-6 pr-2" open>
+              <summary class="flex w-full h-[49px] items-center active:text-[var(--soft-red)] cursor-pointer">
+                <span class="grow text-start">What is the maximum file upload size?</span>
+                <span class="h-full w-10 flex items-center justify-center">
+                  <i class="icon-arrow-down"></i>
+                </span>
+              </summary>
+              <div class="text-xs mb-5">
+                No more than 2GB. All files in your account must fit your allotted storage space.
+              </div>
+            </details>
+            <hr />
+            <details class="max-md:pl-6 pr-2">
+              <summary class="flex w-full h-[49px] items-center active:text-[var(--soft-red)] cursor-pointer">
+                <span class="grow text-start">How do I reset my password?</span>
+                <span class="h-full w-10 flex items-center justify-center">
+                  <i class="icon-arrow-down"></i>
+                </span>
+              </summary>
+              <div class="text-xs mb-5">
+                Click “Forgot password” from the login page or “Change password” from your profile page. A reset link
+                will be emailed to you.
+              </div>
+            </details>
+            <hr />
+            <details class="max-md:pl-6 pr-2">
+              <summary class="flex w-full h-[49px] items-center active:text-[var(--soft-red)] cursor-pointer">
+                <span class="grow text-start">Can I cancel my subscription?</span>
+                <span class="h-full w-10 flex items-center justify-center">
+                  <i class="icon-arrow-down"></i>
+                </span>
+              </summary>
+              <div class="text-xs mb-5">Yes! Send us a message and we’ll process your request no questions asked.</div>
+            </details>
+            <hr />
+            <details class="max-md:pl-6 pr-2">
+              <summary class="flex w-full h-[49px] items-center active:text-[var(--soft-red)] cursor-pointer">
+                <span class="grow text-start">Do you provide additional support?</span>
+                <span class="h-full w-10 flex items-center justify-center">
+                  <i class="icon-arrow-down"></i>
+                </span>
+              </summary>
+              <div class="text-xs mb-5">
+                Chat and email support is available 24/7. Phone lines are open during normal business hours.
+              </div>
+            </details>
+            <hr />
+          </div>
+        </div>
+      </section>
+      <div class="attribution fixed bottom-0 right-0">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="#">Santiago Ariel Villanueva</a>.
+      </div>
+    </main>
+    <script>
+      const details = document.querySelectorAll("details");
+      details.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          details.forEach((detail) => {
+            if (detail !== elem) {
+              detail.removeAttribute("open");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
