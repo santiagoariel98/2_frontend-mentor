@@ -22,7 +22,6 @@
         --slightly-white-stat: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
         font-family: "Inter", sans-serif;
         overflow-x: hidden;
-        /* font-family: "Lexend Deca", sans-serif; */
       }
       .attribution {
         font-size: 11px;
@@ -33,42 +32,58 @@
       }
     </style>
   </head>
-  <body class="w-screen h-screen bg-[var(--very-dark-blue)] text-white overflow-auto">
-    <main class="w-full h-full flex items-center justify-center p-6 max-md:h-max">
+  <body class="w-full h-full bg-[var(--very-dark-blue)] text-white text-[15px]">
+    <main class="w-screen h-screen flex items-center justify-center p-6 max-md:h-full">
       <section
-        class="bg-[var(--dark-desaturated-blue)] w-[65rem] flex h-[26rem] rounded-xl overflow-hidden max-md:flex-col max-md:h-fit max-md:w-full"
+        class="bg-[var(--dark-desaturated-blue)] w-full h-full max-w-[69.5rem] flex max-h-[28rem] rounded-xl overflow-hidden max-md:flex-col max-md:max-h-min"
       >
-        <div class="flex-1 min-w-fit hidden max-md:block">
+        <div class="min-w-fit hidden max-md:block">
           <img class="w-full h-full object-contain" src="./images/image-header-mobile.jpg" alt="working women" />
         </div>
         <div class="flex-1 w-full">
-          <div class="p-[4.25rem] h-full flex flex-col justify-between max-md:p-6 max-md:py-12 max-md:text-center">
+          <div
+            class="p-[4.5rem] h-full flex flex-col justify-between max-md:p-6 max-md:py-12 max-md:text-center max-md:px-8 max-md:pt-10"
+          >
             <div>
-              <h3 class="text-[34px] font-bold leading-[1.2] max-md:text-[26px]">
+              <h3 class="text-4xl font-bold leading-[1.2] max-md:text-[26px] max-md:tracking-wide">
                 Get <span class="text-[var(--soft-violet)]">insights</span> that help your business grow.
               </h3>
-              <p class="text-[15px] pt-6 font-['Lexend Deca'] max-md:pt-4 text-[var(--slightly-white-p)]">
+              <p
+                class="pt-6 font-['Lexend Deca'] max-md:pt-4 text-[var(--slightly-white-p)] tracking-normal max-w-sm leading-[1.65rem] max-md:leading-[1.55rem]"
+              >
                 Discover the benefits of data analytics and make better decisions regarding revenue, customer
                 experience, and overall efficiency.
               </p>
             </div>
-            <div class="flex gap-16 -mb-2 max-md:flex-col max-md:pt-8 max-md:gap-6">
+            <div class="flex gap-[3.9rem] -mb-2 max-md:flex-col max-md:pt-8 max-md:gap-6 max-md:mt-2">
               <span>
-                <h4 class="text-[22px] font-bold">10k+</h4>
-                <p class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca']">companies</p>
+                <h4 class="text-[25px] font-bold">10k+</h4>
+                <p
+                  class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca'] tracking-widest max-sm:mt-0.5"
+                >
+                  companies
+                </p>
               </span>
               <span>
-                <h4 class="text-[22px] font-bold">314</h4>
-                <p class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca']">templates</p>
+                <h4 class="text-[25px] font-bold">314</h4>
+                <p
+                  class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca'] tracking-widest max-sm:mt-0.5"
+                >
+                  templates
+                </p>
               </span>
               <span>
-                <h4 class="text-[22px] font-bold uppercase">12m+</h4>
-                <p class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca']">queries</p>
+                <h4 class="text-[25px] font-bold uppercase">12m+</h4>
+                <p
+                  class="text-[var(--slightly-white-stat)] uppercase text-xs font-['Lexend Deca'] tracking-widest max-sm:mt-0.5"
+                >
+                  queries
+                </p>
               </span>
             </div>
           </div>
         </div>
-        <div class="flex-1 min-w-fit block max-md:hidden">
+        <div class="min-w-fit block max-md:hidden">
           <img
             class="w-full h-full"
             src="./images/image-header-desktop.jpg"
