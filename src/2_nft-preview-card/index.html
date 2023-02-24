@@ -14,6 +14,7 @@
       :root {
         --primary-soft-blue: hsl(215, 51%, 70%);
         --primary-cyan: hsl(178, 100%, 50%);
+        --primary-cyan-opacity: hsla(178, 100%, 50%, 0.5);
         --secondary-body-blue: hsl(217, 54%, 11%); /* (main BG) */
         --secondary-card-blue: hsl(216, 50%, 16%); /* (card BG) */
         --secondary-line-blue: hsl(215, 32%, 27%); /* (line) */
@@ -26,50 +27,74 @@
       .attribution a {
         color: var(--primary-soft-blue);
       }
+      .icon {
+        display: inline-flex;
+      }
+      .icon-clock {
+        background-image: url(images/icon-clock.svg);
+        width: 17px;
+        height: 17px;
+      }
+      .icon-ethereum {
+        width: 11px;
+        height: 16px;
+        background-image: url(images/icon-ethereum.svg);
+      }
+      .icon-view {
+        width: 48px;
+        height: 48px;
+        background-image: url(images/icon-view.svg);
+      }
     </style>
   </head>
   <body class="bg-[var(--secondary-body-blue)] text-white tracking-wide">
-    <div>
-      <main class="w-screen h-screen flex items-center justify-center flex-col">
-        <section class="w-72 p-5 bg-[var(--secondary-card-blue)] rounded-2xl shadow-2xl">
-          <img class="rounded-lg" src="./images/image-equilibrium.jpg" alt="Equilibrium" width="100%" height="100%" />
-          <div class="flex flex-col gap-[1rem] py-4">
-            <h4 class="text-lg font-[500]">Equilibrium #3429</h4>
-            <p class="text-sm font-light text-[var(--primary-soft-blue)]">
-              Our Equilibrium collection promotes balance and calm.
-            </p>
-            <div class="text-[13px] flex justify-between text-[var(--primary-soft-blue)]">
-              <span class="flex items-center text-[var(--primary-cyan)]"
-                ><i
-                  class="mr-1 bg-no-repeat bg-center bg-[url('2_nft-preview-card/images/icon-ethereum.svg')] bg-contain inline-flex w-3 h-4"
-                ></i
-                >0.041 ETH</span
-              >
-              <span class="flex font-light items-center"
-                ><i
-                  class="mr-1 bg-no-repeat bg-center bg-[url('2_nft-preview-card/images/icon-clock.svg')] bg-cover inline-flex w-4 h-4"
-                ></i
-                >3 days left
-              </span>
-            </div>
+    <main class="w-screen h-screen flex items-center justify-center flex-col p-6">
+      <section
+        class="max-w-[22rem] max-h-[37rem] w-full h-full p-6 bg-[var(--secondary-card-blue)] rounded-2xl shadow-2xl max-sm:max-h-[34rem]"
+      >
+        <div class="relative rounded-lg overflow-hidden group">
+          <img class="" src="./images/image-equilibrium.jpg" alt="Equilibrium" width="100%" height="100%" />
+          <div
+            class="absolute inset-0 items-center justify-center bg-[var(--primary-cyan-opacity)] hidden group-hover:flex"
+          >
+            <i class="icon icon-view cursor-pointer"></i>
           </div>
-          <hr class="border-[var(--secondary-line-blue)]" />
-          <span class="flex pt-4 items-center text-[var(--primary-soft-blue)]">
-            <img
-              class="border-[1px] rounded-full mr-3"
-              src="./images/image-avatar.png"
-              alt="avatar user"
-              width="28"
-              height="28"
-            />
-            <p class="text-xs">Creation of <b class="text-white font-light">Jules Wyvern</b></p>
-          </span>
-        </section>
-        <div class="attribution fixed bottom-0 right-0">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
-          by <a href="#">Santiago Ariel Villanueva</a>.
         </div>
-      </main>
-    </div>
+        <div class="flex flex-col gap-4 pt-4 pb-6 max-sm:gap-2 max-sm:pt-5 max-sm:pb-3">
+          <a href="#" class="hover:text-[var(--primary-cyan)]">
+            <h4 href="#" class="text-[1.35rem] font-medium">Equilibrium #3429</h4>
+          </a>
+          <p
+            class="text-lg tracking-normal leading-6 font-light text-[var(--primary-soft-blue)] max-sm:tracking-tighter max-sm:leading-7"
+          >
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="flex justify-between text-[var(--primary-soft-blue)] mt-1 tracking-wide max-sm:tracking-tight">
+            <span class="flex items-center text-[var(--primary-cyan)]"
+              ><i class="mr-1.5 icon icon-ethereum"></i>0.041 ETH</span
+            >
+            <span class="flex font-light items-center"> <i class="mr-1.5 icon icon-clock"></i>3 days left </span>
+          </div>
+        </div>
+        <hr class="border-[var(--secondary-line-blue)]" />
+        <span class="flex pt-4 items-center text-[var(--primary-soft-blue)]">
+          <img
+            class="border-[1px] rounded-full mr-4"
+            src="./images/image-avatar.png"
+            alt="avatar user"
+            width="32"
+            height="32"
+          />
+          <p class="tracking-wide max-sm:tracking-tight">
+            Creation of
+            <a href="#" class="text-white font-light hover:text-[var(--primary-cyan)]">Jules Wyvern</a>
+          </p>
+        </span>
+      </section>
+      <div class="attribution fixed bottom-0 right-0">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="#">Santiago Ariel Villanueva</a>.
+      </div>
+    </main>
   </body>
 </html>
