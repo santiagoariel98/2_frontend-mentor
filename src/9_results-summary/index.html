@@ -1,47 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Results summary component</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <style>
+      :root {
+        font-family: "Hanken Grotesk", sans-serif;
+        --light-red: hsl(0, 100%, 67%);
+        --orangey-yellow: hsl(39, 100%, 56%);
+        --green-teal: hsl(166, 100%, 37%);
+        --cobalt-blue: hsl(234, 85%, 45%);
+        /* transparent */
+        --light-red-opacity: hsla(0, 100%, 67%, 0.05);
+        --orangey-yellow-opacity: hsla(39, 100%, 56%, 0.05);
+        --green-teal-opacity: hsla(166, 100%, 37%, 0.05);
+        --cobalt-blue-opacity: hsla(234, 85%, 45%, 0.05);
+        /* transparent */
+        /* gradient */
+        --light-slate-blue: hsl(252, 100%, 67%); /*  (background) */
+        --light-royal-blue: hsl(241, 81%, 54%); /* (background)  */
+        --violet-blue: hsla(256, 72%, 46%, 1); /* (circle) */
+        --persian-blue: hsla(241, 72%, 46%, 0); /* (circle) */
+        /* gradient */
+        --pale-blue: hsl(221, 100%, 96%);
+        --light-lavender: hsl(241, 100%, 89%);
+        --light-lavender-opacity: hsla(241, 100%, 89%, 0.5);
+        --dark-gray-blue: hsl(224, 30%, 27%);
+        --dark-gray-blue-opacity: hsla(224, 30%, 27%, 0.5);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .icon {
+        margin-left: 0.2rem;
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.8rem;
+      }
+      .icon-reaction {
+        background-image: url(assets/images/icon-reaction.svg);
+      }
+      .icon-memory {
+        background-image: url(assets/images/icon-memory.svg);
+      }
+      .icon-verbal {
+        background-image: url(assets/images/icon-verbal.svg);
+      }
+      .icon-visual {
+        background-image: url(assets/images/icon-visual.svg);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="w-screem h-screen flex items-center justify-center max-md:items-start">
+      <section class="flex max-w-[46rem] w-full max-h-[32rem] h-full rounded-3xl max-md:flex-col">
+        <div
+          class="flex-1 bg-gradient-to-t to-[var(--light-slate-blue)] from-[var(--light-royal-blue)] rounded-[2rem] max-md:-mt-4 max-md:rounded-t-none"
+        >
+          <div
+            class="h-full flex flex-col gap-9 items-center text-center py-[2.3rem] px-14 text-white max-md:gap-[1.35rem] max-md:px-10"
+          >
+            <h5 class="text-2xl text-[var(--light-lavender)] max-md:text-lg">Your Result</h5>
+            <span
+              class="bg-blue-300 w-48 h-48 max-md:w-36 max-md:h-36 rounded-full flex flex-col items-center justify-center pt-4 bg-gradient-to-t to-[var(--violet-blue)] from-[var(--persian-blue)] bg-transparent"
+            >
+              <h1 class="text-[4.25rem] font-black leading-none max-md:text-[3.5rem]">76</h1>
+              <p class="text-lg text-[var(--light-lavender-opacity)]">of 100</p>
+            </span>
+            <div class="flex flex-col gap-2">
+              <h4 class="text-3xl font-bold max-md:text-2xl">Great</h4>
+              <p class="text-lg leading-6 text-[var(--light-lavender)] max-md:text-base max-md:leading-5">
+                You scored higher than 65% of the people who have taken these tests.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1">
+          <div class="h-full flex flex-col justify-between py-[2.3rem] pb-11 px-10 max-md:px-8 max-md:py-6">
+            <h5 class="text-2xl font-bold max-md:text-lg">Summary</h5>
+            <div class="flex flex-col gap-[1.20rem] mb-4 max-md:my-6">
+              <div class="flex justify-between p-[0.8rem] bg-[var(--light-red-opacity)] text-lg font-bold rounded-lg">
+                <div class="flex items-center">
+                  <i class="icon icon-reaction"></i>
+                  <span class="text-[var(--light-red)]">Reaction</span>
+                </div>
+                <p class="tracking-wider">
+                  <span>80</span>
+                  <span class="text-[var(--dark-gray-blue-opacity)]">/ 100</span>
+                </p>
+              </div>
+              <div
+                class="flex justify-between p-[0.8rem] bg-[var(--orangey-yellow-opacity)] text-lg font-bold rounded-lg"
+              >
+                <div class="flex items-center">
+                  <i class="icon icon-memory"></i>
+                  <span class="text-[var(--orangey-yellow)]">Memory</span>
+                </div>
+                <p class="tracking-wider">
+                  <span>92</span>
+                  <span class="text-[var(--dark-gray-blue-opacity)]">/ 100</span>
+                </p>
+              </div>
+              <div class="flex justify-between p-[0.8rem] bg-[var(--green-teal-opacity)] text-lg font-bold rounded-lg">
+                <div class="flex items-center">
+                  <i class="icon icon-verbal"></i>
+                  <span class="text-[var(--green-teal)]">Verbal</span>
+                </div>
+                <p class="tracking-wider">
+                  <span>61</span>
+                  <span class="text-[var(--dark-gray-blue-opacity)]">/ 100</span>
+                </p>
+              </div>
+              <div class="flex justify-between p-[0.8rem] bg-[var(--cobalt-blue-opacity)] text-lg font-bold rounded-lg">
+                <div class="flex items-center">
+                  <i class="icon icon-visual"></i>
+                  <span class="text-[var(--cobalt-blue)]">Visual</span>
+                </div>
+                <p class="tracking-wider">
+                  <span>72</span>
+                  <span class="text-[var(--dark-gray-blue-opacity)]">/ 100</span>
+                </p>
+              </div>
+            </div>
+            <button
+              class="bg-[var(--dark-gray-blue)] text-lg text-[var(--pale-blue)] p-4 rounded-full active:bg-gradient-to-t to-[var(--light-slate-blue)] from-[var(--light-royal-blue)]"
+            >
+              <span>Continue</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="attribution fixed bottom-0 right-0">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="#">Santiago Ariel Villanueva</a>.
+      </div>
+    </main>
+  </body>
 </html>
