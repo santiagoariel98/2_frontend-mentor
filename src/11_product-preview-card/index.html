@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Product preview card component</title>
+    <style>
+      :root {
+        --dark-cyan: hsl(158, 36%, 37%);
+        --cream: hsl(30, 38%, 92%);
+        --very-dark-blue: hsl(212, 21%, 14%);
+        --dark-grayish-blue: hsl(228, 12%, 48%);
+        font-family: "Montserrat", sans-serif;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .icon-cart {
+        background-image: url(images/icon-cart.svg);
+        width: 15px;
+        height: 16px;
+        background-size: cover;
+        display: inline-block;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="text-sm bg-[var(--cream)] text-[var(--dark-grayish-blue)]">
+    <main class="flex items-center justify-center min-h-screen px-4 py-8 max-sm">
+      <div class="flex max-w-[38rem] w-full rounded-xl overflow-hidden bg-white max-sm:flex-col">
+        <div class="flex-1">
+          <img class="max-sm:hidden" src="images/image-product-desktop.jpg" alt="product" />
+          <img class="hidden max-sm:block" src="images/image-product-mobile.jpg" alt="product" />
+        </div>
+        <div class="flex-1">
+          <div class="p-8 flex flex-col h-full justify-between max-sm:p-6">
+            <span class="uppercase tracking-[0.2rem]">Perfume</span>
+            <section class="flex flex-col flex-1 mt-4 gap-7 max-sm:gap-4 max-sm:mb-5 max-sm:mt-1">
+              <h1 class="text-3xl font-black font-['Fraunces'] tracking-wider leading-8 text-black">
+                Gabrielle Essence Eau De Parfum
+              </h1>
+              <p class="leading-relaxed max-sm:mb-3">
+                A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House
+                of CHANEL.
+              </p>
+              <div class="flex gap-4">
+                <h2 class="text-3xl font-black font-['Fraunces'] tracking-wider leading-8 text-[var(--dark-cyan)]">
+                  $149.99
+                </h2>
+                <p class="line-through">$169.99</p>
+              </div>
+            </section>
+            <button
+              class="p-4 rounded-lg text-white bg-[var(--dark-cyan)] active:bg-[var(--very-dark-blue)] max-sm:p-3"
+            >
+              <i class="icon-cart mr-2"></i>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="attribution fixed bottom-0 right-0">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="#">Santiago Ariel Villanueva</a>.
+      </div>
+    </main>
+  </body>
 </html>
