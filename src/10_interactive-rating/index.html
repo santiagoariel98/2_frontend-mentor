@@ -1,49 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="To do this challenge, you need a basic understanding of HTML and CSS." />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="../style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <style>
+      :root {
+        --orange: hsl(25, 97%, 53%);
+        --light-grey: hsl(217, 12%, 63%);
+        --light-blue-opacity: hsla(217, 12%, 63%, 0.15);
+        --medium-grey: hsl(216, 12%, 54%);
+        --dark-blue: hsl(213, 19%, 18%);
+        --very-dark-blue: hsl(216, 12%, 8%);
+        font-family: "Overpass", sans-serif;
+      }
+      .bg-container {
+        background: var(--dark-blue);
+        background: -webkit-radial-gradient(top, #232b34 0%, #171f28 80%);
+        background: -moz-radial-gradient(top, #232b34 0%, #171f28 80%);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 74%);
+      }
+      .icon-star {
+        background-image: url(images/icon-star.svg);
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+      }
+      fieldset > input[type="radio"]:checked + label {
+        background-color: var(--orange);
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="text-[15px] bg-[var(--very-dark-blue)] text-white">
+    <main class="h-screen flex items-center justify-center">
+      <section class="w-full h-full max-w-[25.5rem] max-h-[26rem] p-8 bg-[var(--dark-blue)] rounded-3xl bg-container">
+        <div class="flex flex-col gap-7" id="rating">
+          <div class="inline-flex p-4 w-max bg-[var(--light-blue-opacity)] rounded-full"><i class="icon-star"></i></div>
+          <div class="flex flex-col gap-2 items-start">
+            <h1 class="text-[28px] font-bold">How did we do?</h1>
+            <p class="text-[var(--light-grey)]">
+              Please let us know how we did with your support request. All feedback is appreciated to help us improve
+              our offering!
+            </p>
+          </div>
+          <form class="flex flex-col gap-8">
+            <fieldset class="text-[var(--medium-grey)] font-bold flex justify-between text-center">
+              <input type="radio" id="rating-1" name="rating" value="1" hidden />
+              <label
+                class="inline-flex p-4 bg-[var(--light-blue-opacity)] rounded-full cursor-pointer hover:bg-[var(--medium-grey)] hover:text-white"
+                for="rating-1"
+              >
+                <span class="w-5 h-w-5">1</span>
+              </label>
+              <input type="radio" id="rating-2" name="rating" value="2" hidden />
+              <label
+                class="inline-flex p-4 bg-[var(--light-blue-opacity)] rounded-full cursor-pointer hover:bg-[var(--medium-grey)] hover:text-white"
+                for="rating-2"
+              >
+                <span class="w-5 h-w-5">2</span>
+              </label>
+              <input type="radio" id="rating-3" name="rating" value="3" hidden />
+              <label
+                class="inline-flex p-4 bg-[var(--light-blue-opacity)] rounded-full cursor-pointer hover:bg-[var(--medium-grey)] hover:text-white"
+                for="rating-3"
+              >
+                <span class="w-5 h-w-5">3</span>
+              </label>
+              <input type="radio" id="rating-4" name="rating" value="4" hidden />
+              <label
+                class="inline-flex p-4 bg-[var(--light-blue-opacity)] rounded-full cursor-pointer hover:bg-[var(--medium-grey)] hover:text-white"
+                for="rating-4"
+              >
+                <span class="w-5 h-w-5">4</span>
+              </label>
+              <input type="radio" id="rating-5" name="rating" value="5" hidden />
+              <label
+                class="inline-flex p-4 bg-[var(--light-blue-opacity)] rounded-full cursor-pointer hover:bg-[var(--medium-grey)] hover:text-white"
+                for="rating-5"
+              >
+                <span class="w-5 h-w-5">5</span>
+              </label>
+            </fieldset>
+            <button
+              class="w-full rounded-full bg-[var(--orange)] p-3 hover:text-[var(--orange)] hover:bg-white disabled:bg-[var(--orange)] disabled:text-white disabled:cursor-not-allowed"
+              type="submit"
+              disabled
+            >
+              <span class="uppercase tracking-[0.15rem]">Submit</span>
+            </button>
+          </form>
+        </div>
+        <div class="hidden flex-col justify-between items-center text-center gap-9 px-1" id="thank-you">
+          <div class="mt-4 flex flex-col gap-8">
+            <img src="images/illustration-thank-you.svg" width="162" height="108" />
+            <p class="text-[var(--orange)] rounded-full bg-[var(--light-blue-opacity)] py-1 px-4">
+              <span> You selected</span>
+              <strong></strong>
+              <span>out of 5</span>
+            </p>
+          </div>
+          <div class="flex flex-col gap-0.5">
+            <h2 class="text-[28px] font-bold">Thank you!</h2>
+            <p class="leading-6">
+              We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get
+              in touch!
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="attribution absolute bottom-0 right-0">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="#">Santiago Ariel Villanueva</a>.
+      </div>
+    </main>
+    <script>
+      let radios = document.querySelectorAll("input[type=radio]");
+      let btn = document.querySelector("button[type=submit]");
+      let form = document.querySelector("form");
+      let strong = document.querySelector("strong");
+      let rating = document.getElementById("rating");
+      let thank_you = document.getElementById("thank-you");
+      let value = 0;
+      strong.innerText = value;
+      radios.forEach((elem) => elem.addEventListener("click", () => btn.removeAttribute("disabled")));
+      form.addEventListener("submit", (ev) => {
+        ev.preventDefault();
+        value = new FormData(form).get("rating");
+        strong.innerText = value;
+        rating.classList.add("hidden");
+        rating.classList.remove("flex");
+        thank_you.classList.remove("hidden");
+        thank_you.classList.add("flex");
+      });
+    </script>
+  </body>
 </html>
